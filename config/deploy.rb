@@ -85,7 +85,6 @@ task :deploy  do
     invoke :'deploy:cleanup'
 
     on :launch do
-      command %[ export PATH="$PATH:$HOME/.rbenv/shims" ]
       invoke :'unicorn:restart'
     end
   end

@@ -34,7 +34,7 @@ set :unicorn_pid, "#{fetch(:deploy_to)}/shared/pids/unicorn.pid"
 
 # This task is the environment that is loaded for all remote run commands, such as
 # `mina deploy` or `mina rake`.
-task :environment do
+task :remote_environment do
   command %{
     echo "-----> Loading environment"
     #{echo_cmd %[source ~/.bashrc]}
